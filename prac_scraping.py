@@ -6,7 +6,7 @@ from pymongo import MongoClient
 import requests
 
 
-client = MongoClient("52.79.228.153", 27017, username="sparta", password="hh99")
+client = MongoClient("내AWS아이피", 27017, username="아이디", password="비밀번호")
 db = client.dbsparta_plus_week3
 
 driver = webdriver.Chrome("./chromedriver")
@@ -23,4 +23,3 @@ soup = BeautifulSoup(req, "html.parser")
 
 places = soup.select("ul.restaurant_list > div > div > li > div > a")
 print(len(places))
-
